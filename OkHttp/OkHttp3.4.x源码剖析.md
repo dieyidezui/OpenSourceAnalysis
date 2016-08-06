@@ -36,17 +36,7 @@ Request request = new Request.Builder()
         ....
         .build();
 Call call = client.newCall(request);
-call.enqueue(new Callback() {
-    @Override
-    public void onFailure(Call call, IOException e) {
-        
-    }
-
-    @Override
-    public void onResponse(Call call, Response response) throws IOException {
-
-    }
-});
+call.enqueue(new Callback() {...});
 ```
 
 这里实际上，Call的实现是一个RealCall的类，execute的代码如下:
